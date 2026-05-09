@@ -10,7 +10,9 @@ load_dotenv()
 _client = AsyncOpenAI(
     api_key=os.getenv("FIREWORKS_API_KEY"),
     base_url=os.getenv("FIREWORKS_BASE_URL"),
-    model=os.getenv("FIREWORKS_MODEL"))       
+)
+
+MODEL = os.getenv("FIREWORKS_MODEL")
 
 SYSTEM_PROMPT = """You are a JSON generator. Given a description,
                     respond with ONLY a valid JSON object — no explanation,
